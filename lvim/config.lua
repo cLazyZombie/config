@@ -8,8 +8,8 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.insert_mode["<C-d>"] = "<Del>"
 lvim.builtin.terminal.open_mapping = "<F7>"
-
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"

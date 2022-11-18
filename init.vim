@@ -87,3 +87,6 @@ set wildignore+=*/target/*
 
 "FZF
 nnoremap <silent><nowait> <leader>f :<C-u>FZF<CR>
+
+"delete using C-d in insert mode
+inoremap <C-d> <Del>
