@@ -1,0 +1,133 @@
+{
+  "GitLive.Issue tracker integration": "Disabled",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.fontFamily": "MesloLGS NF",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
+  "editor.mouseWheelZoom": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "info",
+    "error"
+  ],
+  "git.autofetch": true,
+  "git.mergeEditor": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "yaml": false
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "rust-analyzer.completion.privateEditable.enable": true,
+  "rust-analyzer.diagnostics.experimental.enable": true,
+  "rust-analyzer.imports.granularity.enforce": true,
+  "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+  "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+  "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+  "rust-analyzer.workspace.symbol.search.limit": 256,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "vim.argumentObjectClosingDelimiters": [
+    ")",
+    "]",
+    ">"
+  ],
+  "vim.argumentObjectOpeningDelimiters": [
+    "(",
+    "[",
+    "<"
+  ],
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.leader": " ",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "bookmarks.jumpToNext"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "bookmarks.jumpToPrevious"
+      ]
+    }
+  ],
+  "vim.smartRelativeLine": true,
+  "vim.statusBarColorControl": true,
+  "vim.useSystemClipboard": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#5f0000",
+    "statusBar.debuggingBackground": "#5f0000",
+    "statusBar.noFolderBackground": "#5f0000"
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.decorations.colors": true,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "vim.targets.smartQuotes.aIncludesSurroundingSpaces": false,
+  "editor.minimap.autohide": true,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "<Del>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    }
+  ]
+}

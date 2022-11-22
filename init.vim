@@ -6,10 +6,10 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'github/copilot.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme github_dark
