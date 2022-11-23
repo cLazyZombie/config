@@ -9,9 +9,5 @@
         "key": "enter",
         "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "cmd+c",
-        "command": "workbench.explorer.fileView.focus"
     }
 ]
