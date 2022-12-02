@@ -29,7 +29,7 @@
   "rust-analyzer.diagnostics.experimental.enable": true,
   "rust-analyzer.imports.granularity.enforce": true,
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
-  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
   "rust-analyzer.workspace.symbol.search.limit": 256,
