@@ -90,9 +90,9 @@
   "vim.statusBarColorControl": true,
   "vim.useSystemClipboard": true,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#5f0000",
-    "statusBar.debuggingBackground": "#5f0000",
-    "statusBar.noFolderBackground": "#5f0000"
+    "statusBar.background": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f"
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.decorations.colors": true,
@@ -138,5 +138,6 @@
         "workbench.explorer.fileView.focus"
       ]
     }
-  ]
+  ],
+  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*"
 }

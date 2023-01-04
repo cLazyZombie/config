@@ -12,12 +12,7 @@ require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig' 
   use 'simrat39/rust-tools.nvim'
-  use {
-    "sitiom/nvim-numbertoggle",
-    config = function()
-      require("numbertoggle").setup()
-    end
-  }
+  use 'sitiom/nvim-numbertoggle'
 
   -- Completion framework:
   use 'hrsh7th/nvim-cmp' 
