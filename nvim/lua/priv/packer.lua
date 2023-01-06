@@ -45,4 +45,15 @@ return require('packer').startup(function(use)
 	}
 
     use("github/copilot.vim")
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    }
+
+    use ('terrortylor/nvim-comment')
+    use ('tpope/vim-surround')
+    use { "akinsho/toggleterm.nvim", tag = '*' }
 end)
