@@ -15,6 +15,9 @@ require("nvim-tree").setup({
           close = true,
       },
   },
+  update_focused_file = {
+      enable = true,
+  },
   view = {
     adaptive_size = true,
     mappings = {
