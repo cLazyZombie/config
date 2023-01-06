@@ -9,6 +9,11 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   reload_on_bufenter = false,
+  actions = {
+      open_file = {
+          quit_on_open = true,
+      },
+  },
   tab = {
       sync = {
           open = true,
@@ -34,5 +39,4 @@ require("nvim-tree").setup({
   },
 })
 
--- vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
