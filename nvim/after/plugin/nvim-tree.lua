@@ -8,6 +8,13 @@ vim.opt.termguicolors = true
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  reload_on_bufenter = false,
+  tab = {
+      sync = {
+          open = true,
+          close = true,
+      },
+  },
   view = {
     adaptive_size = true,
     mappings = {
