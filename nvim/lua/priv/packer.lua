@@ -56,4 +56,6 @@ return require('packer').startup(function(use)
     use ('terrortylor/nvim-comment')
     use ('tpope/vim-surround')
     use { "akinsho/toggleterm.nvim", tag = '*' }
+    use 'nvim-tree/nvim-web-devicons'
+    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 end)
