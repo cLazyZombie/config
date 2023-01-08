@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
 	  }
 	}
 
+    use 'neovim/nvim-lspconfig'
+    use 'simrat39/rust-tools.nvim'
+
     use("github/copilot.vim")
 
     use {
