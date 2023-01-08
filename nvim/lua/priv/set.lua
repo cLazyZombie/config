@@ -29,3 +29,11 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
+
+-- highlight on yank
+vim.cmd([[
+augroup highlight_yank
+	autocmd!
+	autocmd TextYankPost * silent! lua vim.highlight.on_yank({timeout = 200})
+augroup END
+]])
