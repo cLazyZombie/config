@@ -90,9 +90,9 @@
   "vim.statusBarColorControl": true,
   "vim.useSystemClipboard": true,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#5f00af",
-    "statusBar.debuggingBackground": "#5f00af",
-    "statusBar.noFolderBackground": "#5f00af"
+    "statusBar.background": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f"
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.decorations.colors": true,
@@ -139,5 +139,9 @@
       ]
     }
   ],
-  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*"
+  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+  "vim.neovimUseConfigFile": true,
+  "editor.inlayHints.padding": true
 }
