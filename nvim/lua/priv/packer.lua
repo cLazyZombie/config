@@ -45,8 +45,20 @@ return require('packer').startup(function(use)
         }
     }
 
-    use { 'neovim/nvim-lspconfig' }
-    use { 'simrat39/rust-tools.nvim' }
+    use({
+        'simrat39/rust-tools.nvim',
+        requires = {
+            { 'neovim/nvim-lspconfig' },
+        },
+    })
+
+    use({
+        'ray-x/navigator.lua',
+        requires = {
+            { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+            { 'neovim/nvim-lspconfig' },
+        },
+    })
 
 
     use("github/copilot.vim")

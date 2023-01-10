@@ -79,15 +79,15 @@ vim.diagnostic.config({
 })
 
 -- 위의 lsp.on_attach가 동작하지 않아서 임시로 이렇게 설정함
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol)
-vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references)
-vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
-vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover)
+-- vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol)
+-- vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
+-- vim.keymap.set("n", "[d", vim.diagnostic.goto_next)
+-- vim.keymap.set("n", "]d", vim.diagnostic.goto_prev)
+-- vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action)
+-- vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references)
+-- vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+-- vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
