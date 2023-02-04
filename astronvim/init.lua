@@ -14,8 +14,8 @@ return {
           }
         end,
       },
-      { 
-        "zbirenbaum/copilot.lua" ,
+      {
+        "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
         config = function()
@@ -30,13 +30,13 @@ return {
           })
         end,
       },
-			-- {
-			-- 	 "zbirenbaum/copilot-cmp",
-			-- 		after = { "copilot.lua" },
-			-- 		config = function ()
-			-- 			require("copilot_cmp").setup()
-			-- 		end
-			-- },
+      -- {
+      -- 	 "zbirenbaum/copilot-cmp",
+      -- 		after = { "copilot.lua" },
+      -- 		config = function ()
+      -- 			require("copilot_cmp").setup()
+      -- 		end
+      -- },
     },
     cmp = function(opts)
       -- opts parameter is the default options table
