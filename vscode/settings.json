@@ -94,7 +94,6 @@
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.decorations.colors": true,
-  "workbench.sideBar.location": "right",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -135,6 +134,22 @@
       "commands": [
         "workbench.explorer.fileView.focus"
       ]
+    },
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
+    },
+    {
+      "before": [
+        "c-r"
+      ],
+      "commands": [
+        "redo"
+      ]
     }
   ],
   "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
@@ -148,5 +163,8 @@
   ],
   "remote.SSH.remotePlatform": {
     "sandbox.bety4o.csb": "linux"
+  },
+  "[python]": {
+    "editor.formatOnType": true
   }
 }
