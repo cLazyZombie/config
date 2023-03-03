@@ -82,6 +82,22 @@
       "commands": [
         "bookmarks.jumpToPrevious"
       ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
     }
   ],
   "vim.smartRelativeLine": true,

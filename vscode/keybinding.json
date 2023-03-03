@@ -9,5 +9,15 @@
         "key": "enter",
         "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "explorerViewletFocus"
     }
 ]
