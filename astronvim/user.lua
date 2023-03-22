@@ -1,4 +1,7 @@
 return {
+  lsp = {
+    skip_setup = { "rust_analyzer" }, -- rust-tools will handle setting up the LSP
+  },
   {
     "simrat39/rust-tools.nvim",
     after = { "mason-lspconfig.nvim" },
