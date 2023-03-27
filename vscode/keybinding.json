@@ -19,5 +19,15 @@
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
         "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "DownArraw",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "UpArraw",
+        "when": "terminalFocus"
     }
 ]

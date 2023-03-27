@@ -4,8 +4,7 @@
   "editor.autoClosingDelete": "never",
   "editor.autoClosingQuotes": "never",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.fontFamily": "MesloLGS NF",
-  "editor.fontSize": 13,
+  "editor.fontFamily": "MesloLGM NFM",
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
@@ -31,8 +30,7 @@
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
   "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
   "rust-analyzer.workspace.symbol.search.limit": 256,
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontSize": 12,
   "vim.argumentObjectClosingDelimiters": [
     ")",
     "]",
@@ -182,5 +180,10 @@
   },
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "editor.fontSize": 13,
+  "scm.inputFontFamily": "editor",
+  "debug.console.fontFamily": "MesloLGM NFM",
+  "editor.codeLensFontFamily": "MesloLGM NFM",
+  "errorLens.fontFamily": "MesloLGM NFM",
 }
