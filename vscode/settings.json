@@ -5,6 +5,7 @@
   "editor.autoClosingQuotes": "never",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.fontFamily": "MesloLGM NFM",
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
