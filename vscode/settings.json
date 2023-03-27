@@ -31,7 +31,7 @@
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
   "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
   "rust-analyzer.workspace.symbol.search.limit": 256,
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontSize": 13,
   "vim.argumentObjectClosingDelimiters": [
     ")",
     "]",
