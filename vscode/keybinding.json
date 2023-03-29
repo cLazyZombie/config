@@ -22,12 +22,22 @@
     },
     {
         "key": "ctrl+n",
-        "command": "DownArraw",
+        "command": "cursorDown",
         "when": "terminalFocus"
     },
     {
         "key": "ctrl+p",
-        "command": "UpArraw",
+        "command": "cursorUp",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
     }
 ]
