@@ -2,6 +2,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.lua" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "zbirenbaum/copilot.lua" },
