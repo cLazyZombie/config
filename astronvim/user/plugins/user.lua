@@ -4,4 +4,5 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
 }
