@@ -12,6 +12,13 @@ return {
 			end,
 			desc = "Previous buffer",
 		},
+		["<F12>"] = {
+			function()
+				print("f12")
+				vim.lsp.buf.definition()
+			end,
+			desc = "Show the definition of current symbol",
+		},
 	},
 	i = {
 		["<C-d>"] = {
