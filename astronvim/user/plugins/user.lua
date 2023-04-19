@@ -5,4 +5,17 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  require("telescope").setup({
+    defaults = {
+      vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+      },
+    },
+  }),
 }
