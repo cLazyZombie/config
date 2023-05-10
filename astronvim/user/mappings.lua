@@ -25,5 +25,9 @@ return {
 			"<Del>",
 			desc = "Delete character",
 		},
+		["<C-s>"] = {
+			"<Esc>:w<CR>",
+			desc = "Save file",
+		},
 	},
 }
