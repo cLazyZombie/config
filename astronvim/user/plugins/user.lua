@@ -4,7 +4,11 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.motion.nvim-surround" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
+  { import = "astrocommunity.editing-support/todo-comments-nvim" },
+  -- { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
+  -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   require("telescope").setup({
     defaults = {
       vimgrep_arguments = {
