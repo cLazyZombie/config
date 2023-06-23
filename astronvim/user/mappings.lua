@@ -19,6 +19,11 @@ return {
 			end,
 			desc = "Show the definition of current symbol",
 		},
+		-- leader + v -> replace word under cursor with default register
+		["<Leader>v"] = {
+			"ciw<C-r>0<ESC>",
+			desc = "Replace word under cursor with default register",
+		},
 	},
 	i = {
 		["<C-d>"] = {
