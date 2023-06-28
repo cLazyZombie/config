@@ -7,6 +7,8 @@ return {
 	-- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
 	{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
 	{ import = "astrocommunity.editing-support/todo-comments-nvim" },
+	-- { import = "astrocommunity.workflow/hardtime-nvim" },
+	{ "m4xshen/hardtime.nvim",                                        event = "VeryLazy", opts = {} },
 	-- { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
 	-- { import = "astrocommunity.diagnostics.trouble-nvim" },
 	require("telescope").setup({
