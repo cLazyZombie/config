@@ -4,7 +4,7 @@
   "editor.autoClosingDelete": "never",
   "editor.autoClosingQuotes": "never",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.fontFamily": "MesloLGM NFM",
+  "editor.fontFamily": "MesloLGM Nerd Font Mono",
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
@@ -105,7 +105,9 @@
   "workbench.colorCustomizations": {
     "statusBar.background": "#005f5f",
     "statusBar.debuggingBackground": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f"
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.decorations.colors": true,
@@ -182,9 +184,9 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "editor.fontSize": 13,
   "scm.inputFontFamily": "editor",
-  "debug.console.fontFamily": "MesloLGM NFM",
-  "editor.codeLensFontFamily": "MesloLGM NFM",
+  "debug.console.fontFamily": "MesloLGM Nerd Font Mono",
+  "editor.codeLensFontFamily": "MesloLGM Nerd Font Mono",
   "errorLens.fontFamily": "MesloLGM NFM",
+  "json.format.enable": false
 }
