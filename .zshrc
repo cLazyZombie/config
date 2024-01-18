@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 PROMPT='mac@%1~ %# '
 
 #vim mode
@@ -27,10 +29,14 @@ export PATH="$HOME/.local/bin:$PATH"
 #alias
 #alias ls='lsd --no-symlink'
 alias ls='exa --git --icons --color=always --group-directories-first'
-alias ll='ls -alhF'
+#alias ll='ls -alhF'
 alias ct='cargo nextest run --workspace --status-level fail'
 alias cy='cargo clippy --workspace --all-targets --all-features -- -D warnings'
 alias cr='cargo run'
 alias call='ct && cy'
+alias ll='exa --git --icons --color=always --group-directories-first -alhF'
 
 eval "$(starship init zsh)"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
