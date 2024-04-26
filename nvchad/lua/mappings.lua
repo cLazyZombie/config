@@ -1,6 +1,10 @@
 require "nvchad.mappings"
 
--- add yours here
+-- delete default mappings
+-- default: https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/mappings.lua
+vim.keymap.del("n", "<TAB>");
+vim.keymap.del("n", "<S-TAB>");
+vim.keymap.del({"n"}, "<C-n>");
 
 local map = vim.keymap.set
 
