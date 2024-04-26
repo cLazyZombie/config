@@ -49,5 +49,9 @@
         "key": "ctrl+p",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+cmd+t",
+        "command": "rust-analyzer.runSingle"
     }
 ]
