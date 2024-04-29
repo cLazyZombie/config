@@ -24,6 +24,10 @@ lspconfig.tsserver.setup {
 
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
+  -- on_attach = function()
+  --   on_attach()
+  --   vim.keymap.del('n', "gr", { buffer = true })
+  -- end,
   capabilities = capabilities,
   filetypes = {
     "rust"

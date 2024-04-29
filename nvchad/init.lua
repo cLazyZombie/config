@@ -38,8 +38,8 @@ vim.schedule(function()
   require "mappings"
 end)
 
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    vim.keymap.del("n", "gr", { buffer = ev.buf })
-  end,
-})
+-- vim.api.nvim_create_autocmd('LspAttach', {
+--   callback = function(ev)
+--     vim.keymap.del("n", "gr", { buffer = ev.buf ,silent = true})
+--   end,
+-- })

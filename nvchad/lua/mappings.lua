@@ -11,7 +11,7 @@ local map = vim.keymap.set
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map({"n", "i", "v"}, "<C-s>", "<cmd> w <CR><ESC>")
+map({"n", "i", "v"}, "<C-s>", "<cmd> w!<CR><ESC>")
 
 -- buffer prev/next
 map("n", "[b", function() require("nvchad.tabufline").prev() end, { desc = "Buffer Goto previous" })
@@ -32,5 +32,5 @@ map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() en
 map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics({bufnr = 0}) end, { desc = "LSP buffer diagnostics" })
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
-map("n", "gr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
+map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
 
