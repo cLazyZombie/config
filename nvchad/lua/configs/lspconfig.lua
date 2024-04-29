@@ -22,21 +22,22 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
-lspconfig.rust_analyzer.setup({
-  on_attach = on_attach,
-  -- on_attach = function()
-  --   on_attach()
-  --   vim.keymap.del('n', "gr", { buffer = true })
-  -- end,
-  capabilities = capabilities,
-  filetypes = {
-    "rust"
-  },
-  settings = {
-    ['rust-analyzer'] = {
-      cargo = {
-        allFeatures = true,
-      }
-    }
-  }
-})
+-- lspconfig.rust_analyzer.setup({
+--   on_attach = on_attach,
+--   on_init = on_init,
+--   -- on_attach = function()
+--   --   on_attach()
+--   --   vim.keymap.del('n', "gr", { buffer = true })
+--   -- end,
+--   capabilities = capabilities,
+--   filetypes = {
+--     "rust"
+--   },
+--   settings = {
+--     ['rust-analyzer'] = {
+--       cargo = {
+--         allFeatures = true,
+--       }
+--     }
+--   }
+-- })

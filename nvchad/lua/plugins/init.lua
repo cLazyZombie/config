@@ -61,8 +61,7 @@ return {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
+    opts = {
         suggestion = {
           auto_trigger = true,
           keymap = {
@@ -72,7 +71,19 @@ return {
         filetypes = {
           ["."] = true,
         },
-      })
-    end,
+    },
+    -- config = function()
+    --   require("copilot").setup({
+    --     suggestion = {
+    --       auto_trigger = true,
+    --       keymap = {
+    --         accept = "<C-Enter>",
+    --       },
+    --     },
+    --     filetypes = {
+    --       ["."] = true,
+    --     },
+    --   })
+    -- end,
   }
 }
