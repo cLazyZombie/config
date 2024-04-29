@@ -5,6 +5,7 @@ require "nvchad.mappings"
 vim.keymap.del("n", "<TAB>");
 vim.keymap.del("n", "<S-TAB>");
 vim.keymap.del({"n"}, "<C-n>");
+-- vim.keymap.del("n", "gr");
 
 local map = vim.keymap.set
 
@@ -31,3 +32,5 @@ map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() en
 map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics({bufnr = 0}) end, { desc = "LSP buffer diagnostics" })
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
+map("n", "gr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
+
