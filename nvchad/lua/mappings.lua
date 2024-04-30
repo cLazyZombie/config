@@ -33,4 +33,4 @@ map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_works
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics({bufnr = 0}) end, { desc = "LSP buffer diagnostics" })
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
 map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
-
+map("n", "<leader>f<CR>", function() require("telescope.builtin").resume() end, { desc = "Telescope Resume search" })
