@@ -1,6 +1,30 @@
+" for refresh - :source <this file path>
+
 let mapleader = " "
 
-nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-nnoremap <leader>m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+set number relativenumber
+
+nnoremap ]m :vsc Edit.NextMethod<CR>
+nnoremap [m :vsc Edit.PreviousMethod<CR>
+nnoremap ]b :vsc Window.NextTab<CR>
+nnoremap [b :vsc Window.PreviousTab<CR>
+nnoremap ]d :vsc Edit.GotoNextIssueInFile<CR>
+nnoremap [d :vsc Edit.GotoPreviousIssueInFile<CR>
+nnoremap ]D :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nnoremap [D :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+
 nnoremap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
+nnoremap <leader>ff :vsc ReSharper.ReSharper_GotoFile<CR>
+nnoremap <leader>fs :vsc ReSharper.ReSharper_GotoType<CR>
+nnoremap <leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
+
+nnoremap gy :vsc ReSharper.ReSharper_GotoTypeDeclaration<CR>
+nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+
+nnoremap <C-o> :vsc View.NavigateBackward<CR>
+nnoremap <C-i> :vsc View.NavigateForward<CR>
+
+nnoremap <leader>cc :vsc ReSharper.ReSharper_SwitchHeaderSource<CR>
+
+nnoremap <leader>x :vsc File.Close<CR>
+nnoremap <leader>bc :vsc File.CloseAllButThis<CR>
