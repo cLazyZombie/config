@@ -1,0 +1,6 @@
+let mapleader = " "
+
+nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+nnoremap <leader>m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+nnoremap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
