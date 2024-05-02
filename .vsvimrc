@@ -3,6 +3,11 @@
 let mapleader = " "
 
 set number relativenumber
+"set smartcase
+set ignorecase
+
+"inoremap <C-s> :vsc File.SaveSelectedItems<CR><Esc>
+noremap <C-s> <Esc>:vsc File.SaveSelectedItems<CR><Esc>
 
 nnoremap ]m :vsc Edit.NextMethod<CR>
 nnoremap [m :vsc Edit.PreviousMethod<CR>
@@ -20,6 +25,8 @@ nnoremap <leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 
 nnoremap gy :vsc ReSharper.ReSharper_GotoTypeDeclaration<CR>
 nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nnoremap gcc :vsc Edit.ToggleLineComment<CR>
+vnoremap gc :vsc Edit.ToggleLineComment<CR>
 
 nnoremap <C-o> :vsc View.NavigateBackward<CR>
 nnoremap <C-i> :vsc View.NavigateForward<CR>
