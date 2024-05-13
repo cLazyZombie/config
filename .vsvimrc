@@ -23,6 +23,8 @@ nnoremap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
 nnoremap <leader>ff :vsc ReSharper.ReSharper_GotoFile<CR>
 nnoremap <leader>fs :vsc ReSharper.ReSharper_GotoType<CR>
 nnoremap <leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
+nnoremap <leader>fw :vsc ReSharper.ReSharper_GotoText<CR>
+nnoremap <leader>fm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 
 nnoremap <leader>wh :vsc Window.MoveToPreviousTabGroup<CR>
 nnoremap <leader>wl :vsc Window.MoveToNextTabGroup<CR>
