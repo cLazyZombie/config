@@ -53,3 +53,8 @@ end, { desc = "LSP references" })
 map("n", "<leader>f<CR>", function()
   require("telescope.builtin").resume()
 end, { desc = "Telescope Resume search" })
+
+-- copilot chat
+map("n", "<leader>cc", function()
+  require("CopilotChat").toggle()
+end, { desc = "Copilot Chat" })
