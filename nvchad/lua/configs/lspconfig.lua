@@ -22,6 +22,9 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
+-- format on save
+vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })]]
+
 -- lspconfig.rust_analyzer.setup({
 --   on_attach = on_attach,
 --   on_init = on_init,
