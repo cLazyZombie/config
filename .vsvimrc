@@ -47,3 +47,6 @@ nnoremap <leader>cc :vsc ReSharper.ReSharper_SwitchHeaderSource<CR>
 
 nnoremap <leader>x :vsc File.Close<CR>
 nnoremap <leader>bc :vsc File.CloseAllButThis<CR>
+
+nnoremap <leader>v ciw<C-r>0<ESC>
+

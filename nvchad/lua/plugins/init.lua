@@ -64,7 +64,7 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-Enter>",
+          accept = "<C-l>",
         }
       }
     }
