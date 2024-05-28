@@ -41,10 +41,10 @@ nnoremap <leader>o :vsc View.SolutionExplorer<CR>
 
 nnoremap K :vsc Edit.QuickInfo<CR>
 
-"nnoremap <C-o> :vsc View.NavigateBackward<CR>
-"nnoremap <C-i> :vsc View.NavigateForward<CR>
-nnoremap <C-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
-nnoremap <C-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
+nnoremap <C-o> :vsc View.NavigateBackward<CR>
+nnoremap <C-i> :vsc View.NavigateForward<CR>
+" nnoremap <C-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+" nnoremap <C-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
 nnoremap <leader>cc :vsc ReSharper.ReSharper_SwitchHeaderSource<CR>
 
