@@ -7,8 +7,8 @@ set number relativenumber
 set ignorecase
 
 "inoremap <C-s> :vsc File.SaveSelectedItems<CR><Esc>
-noremap <C-s> :vsc Edit.FormatDocument<CR>:vsc File.SaveSelectedItems<CR><Esc>
-inoremap <C-s> <Esc>:vsc Edit.FormatDocument<CR>:vsc File.SaveSelectedItems<CR><Esc>
+noremap <C-s> :vsc ReSharper.ReSharper_ReformatCode<CR>:vsc File.SaveSelectedItems<CR><Esc>
+inoremap <C-s> <Esc>:vsc ReSharper.ReSharper_ReformatCode<CR>:vsc File.SaveSelectedItems<CR><Esc>
 
 nnoremap ]m :vsc Edit.NextMethod<CR>
 nnoremap [m :vsc Edit.PreviousMethod<CR>
