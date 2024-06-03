@@ -33,6 +33,7 @@ map("n", "<leader>fd", function() require("telescope.builtin").diagnostics { buf
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
 map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
 map("n", "<leader>f<CR>", function() require("telescope.builtin").resume() end, { desc = "Telescope Resume search" })
+map("n", "gl", function() vim.diagnostic.open_float() end, { desc = "LSP open diagnostics" })
 
 -- copilot chat
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
