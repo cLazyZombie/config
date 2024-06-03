@@ -28,6 +28,7 @@ map({ "n", "t" }, "<C-F7>", function() require("nvchad.term").toggle { pos = "fl
 -- lsp
 map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() end, { desc = "LSP type definition" })
 map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
+map("n", "<leader>fm", function() require("telescope.builtin").lsp_document_symbols() end, { desc = "LSP document synbols" })
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics { bufnr = 0 } end, { desc = "LSP buffer diagnostics" })
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
 map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
