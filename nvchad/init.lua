@@ -55,6 +55,12 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+-- auto read file when changed outside of neovim
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
 -- vim.api.nvim_create_autocmd('LspAttach', {
 --   callback = function(ev)
 --     vim.keymap.del("n", "gr", { buffer = ev.buf ,silent = true})
