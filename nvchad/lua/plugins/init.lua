@@ -24,7 +24,20 @@ return {
       },
     },
   },
-
+  { -- override nvim-cmp plugin
+    "hrsh7th/nvim-cmp",
+    -- override the options table that is used in the `require("cmp").setup()` call
+    opts = function(_, opts)
+      -- opts parameter is the default options table
+      -- the function is lazy loaded so cmp is able to be required
+      local cmp = require("cmp")
+      -- modify the mapping part of the table
+      opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+      opts.mapping["<Down>"] = cmp.mapping.select_next_item()
+      opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
+      opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
+    end,
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
