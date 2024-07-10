@@ -43,3 +43,6 @@ map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = 
 
 -- paste with leader-v
 map("n", "<leader>v", "ciw<C-r>0<ESC>")
+
+-- backspace at normal mode to delete word and enter insert mode
+map("n", "<BS>", "ciw")
