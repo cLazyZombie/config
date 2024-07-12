@@ -17,7 +17,7 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w!<CR><ESC>")
 -- buffer 
 map("n", "[b", function() require("nvchad.tabufline").prev() end, { desc = "Buffer Goto previous" })
 map("n", "]b", function() require("nvchad.tabufline").next() end, { desc = "Buffer Goto next" })
-map("n", "<leader>bc", function() require("nvchad.tabufline").closeOtherBufs() end, { desc = "Buffer Close all except current" })
+map("n", "<leader>bc", function() require("nvchad.tabufline").closeAllBufs(false) end, { desc = "Buffer Close all except current" })
 
 -- nvimtree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Nvimtree Toggle window" })
