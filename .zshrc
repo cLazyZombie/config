@@ -20,7 +20,7 @@ PROMPT='mac@%1~ %# '
 
 #자동완성
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' autosuggest-accept
+bindkey '^f' autosuggest-accept
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
