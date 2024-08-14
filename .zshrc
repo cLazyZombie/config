@@ -28,13 +28,16 @@ export PATH="$HOME/.local/bin:$PATH"
 
 #alias
 #alias ls='lsd --no-symlink'
-alias ls='exa --git --icons --color=always --group-directories-first'
+# alias ls='exa --git --icons --color=always --group-directories-first'
 #alias ll='ls -alhF'
 alias ct='cargo nextest run --workspace --status-level fail'
 alias cy='cargo clippy --workspace --all-targets --all-features -- -D warnings'
 alias cr='cargo run'
 alias call='ct && cy'
-alias ll='exa --git --icons --color=always --group-directories-first -alhF'
+# alias ll='exa --git --icons --color=always --group-directories-first -alhF'
+alias ls='lsd'
+alias ll='lsd -a -l'
+alias lt='lsd -tree'
 
 eval "$(starship init zsh)"
 
