@@ -10,7 +10,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- change shell arguments if winows
-if vim.fn.has("win64") or vim.fn.has("win32") then
+if vim.loop.os_uname().sysname == "Windows_NT" then
   o.shell = "cmd.exe /s /k \"C:\\Users\\jojongguk\\config\\windows.bat\""
 end
 
