@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Bold'})
-config.font_size = 10.0
+config.font_size = 12.0
 config.freetype_load_target = "Normal"
 
 -- set theme
@@ -26,6 +26,7 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   -- And inject clink into the command prompt
   -- config.default_prog =
   --   { 'cmd.exe', '/s', '/k', 'clink', 'inject', '-q' }
+  config.font_size = 10.0
 end
 
 return config
