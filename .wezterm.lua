@@ -5,6 +5,10 @@ config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Bold'})
 config.font_size = 12.0
 config.freetype_load_target = "Normal"
 
+-- set window size
+config.initial_cols = 150
+config.initial_rows = 60
+
 -- set theme
 local theme = wezterm.color.get_builtin_schemes()['GitHub Dark']
 theme.background = '#24292e'
