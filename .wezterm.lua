@@ -1,8 +1,9 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+-- set font
 config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Bold'})
-config.font_size = 12.0
+config.font_size = 13.0
 config.freetype_load_target = "Normal"
 
 -- set window size
@@ -16,9 +17,11 @@ theme.foreground = '#C9D1D9'
 config.color_schemes = {['MyTheme'] = theme}
 config.color_scheme = 'MyTheme'
 
+-- set tab bar
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 
+-- set windows specific settings
 config.set_environment_variables = {}
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   -- Use OSC 7 as per the above example
