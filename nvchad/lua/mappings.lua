@@ -36,7 +36,13 @@ map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end
 map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
 map("n", "<leader>fu", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
 map("n", "<leader>f<CR>", function() require("telescope.builtin").resume() end, { desc = "Telescope Resume search" })
+map("n", "<leader>fg", function() require("telescope.builtin").git_status() end, { desc = "Git status" })
 map("n", "gl", function() vim.diagnostic.open_float() end, { desc = "LSP open diagnostics" })
+
+-- git
+map("n", "<leader>gd", function() require('gitsigns').diffthis() end, { desc = "Git diff this file" })
+map("n", "[g", function() require('gitsigns').nav_hunk('prev') end, { desc = "go to prev git changes" })
+map("n", "]g", function() require('gitsigns').nav_hunk('next') end, { desc = "go to next git changes" })
 
 -- copilot chat
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
