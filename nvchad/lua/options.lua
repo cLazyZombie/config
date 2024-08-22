@@ -16,3 +16,5 @@ end
 
 -- highlight on yank
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
+
+vim.api.nvim_set_option("clipboard", "unnamed")
