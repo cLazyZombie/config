@@ -38,4 +38,11 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.font_size = 10.0
 end
 
+config.keys = {
+  {
+    key = 'Space',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivateCopyMode,
+  },
+}
 return config
