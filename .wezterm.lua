@@ -44,5 +44,10 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.ActivateCopyMode,
   },
+  {
+    key = 'w',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action{CloseCurrentTab={confirm=false}},
+  },
 }
 return config
