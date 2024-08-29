@@ -22,3 +22,6 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 -- dap
 vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='', linehl='', numhl=''})
 vim.fn.sign_define('DapStopped', {text='▶️', texthl='', linehl='', numhl=''})
+
+-- inlay hint
+vim.lsp.inlay_hint.enable(true)

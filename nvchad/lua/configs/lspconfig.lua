@@ -26,6 +26,11 @@ lspconfig.tsserver.setup {
 vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })]]
 
 -- lspconfig.rust_analyzer.setup({
+--   on_attach = function(client, bufnr)
+--     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+--   end
+-- })
+-- lspconfig.rust_analyzer.setup({
 --   on_attach = on_attach,
 --   on_init = on_init,
 --   -- on_attach = function()
