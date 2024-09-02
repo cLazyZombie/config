@@ -11,7 +11,8 @@ vim.wo.relativenumber = true
 
 -- change shell arguments if winows
 if vim.loop.os_uname().sysname == "Windows_NT" then
-  o.shell = "cmd.exe /s /k \"C:\\Users\\jojongguk\\config\\windows.bat\""
+  -- o.shell = "cmd.exe /s /k \"C:\\Users\\jojongguk\\config\\windows.bat\""
+  o.shell = "C:\\Users\\jojongguk\\config\\cmd.bat"
 end
 
 -- highlight on yank
