@@ -53,6 +53,9 @@ map("n", "<leader>v", "ciw<C-r>0<ESC>")
 -- backspace at normal mode to delete word and enter insert mode
 map("n", "<BS>", "ciw")
 
+-- toggle inlay hints
+map("n", "<leader>i", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = "Toggle inlay hints" })
+
 -- dap
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Debug Continue" })
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Debug Step Over" })
