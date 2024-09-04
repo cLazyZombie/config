@@ -58,14 +58,14 @@ return {
             local on_attach = require("nvchad.configs.lspconfig").on_attach;
             on_attach(client, buffer)
           end,
-        },
-        default_settings = {
-          -- rust-analyzer language server configuration
-          ['rust-analyzer'] = {
-            -- cargo = {
-            --   allFeatures = 'true',
-            --   features = { 'all' },
-            -- }
+          default_settings = {
+            -- rust-analyzer language server configuration
+            ['rust-analyzer'] = {
+              cargo = {
+                allFeatures = true,
+                --   features = { 'all' },
+              },
+            },
           },
         },
       }
