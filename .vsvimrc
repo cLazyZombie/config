@@ -53,3 +53,6 @@ nnoremap <leader>bc :vsc File.CloseAllButThis<CR>
 
 nnoremap <leader>v ciw<C-r>0<ESC>
 nnoremap <BS> ciw
+
+"escape using jk
+inoremap jk <Esc>
