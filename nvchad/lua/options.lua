@@ -26,3 +26,9 @@ vim.fn.sign_define('DapStopped', {text='▶️', texthl='', linehl='', numhl=''}
 
 -- inlay hint
 vim.lsp.inlay_hint.enable(true)
+
+-- no auto wrap
+-- :h fo-table for more options
+-- for rustaceanvim, on_attach function also removes 't' and 'c' from formatoptions
+vim.opt.formatoptions:remove("t")
+vim.opt.formatoptions:remove("c")

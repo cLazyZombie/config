@@ -57,6 +57,10 @@ return {
           on_attach = function(client, buffer)
             local on_attach = require("nvchad.configs.lspconfig").on_attach;
             on_attach(client, buffer)
+
+            vim.opt.formatoptions:remove("t")
+            vim.opt.formatoptions:remove("c")
+            -- vim.print(vim.opt.formatoptions:get())
           end,
           default_settings = {
             -- rust-analyzer language server configuration
