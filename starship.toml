@@ -2,7 +2,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-format = '$all$fill$time$line_break$shell$character'
+# format = '$all$fill$time$line_break$shell$character'
+format = '$all$time$line_break$shell$character'
 add_newline = true
 command_timeout = 2000000000
 
@@ -12,7 +13,10 @@ truncate_to_repo = false
 
 [time]
 disabled = false
-format = '[\[ $time \]]($style) '
+format = '[\[$time\]]($style) '
+# format = "[🕒 $time]($style)"
+time_format = "%T"
+style = "bold yellow"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"

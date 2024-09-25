@@ -25,7 +25,7 @@ map("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", { desc = "Nvimtree Focus window"
 
 -- term
 -- map({ "n", "t" }, "<F7>", function() require("nvchad.term").toggle { pos = "sp", size = 0.6, id = "htoggleTerm" } end, { desc = "Toggle Terminal" })
-map({ "n", "t" }, "<F7>", function() require("nvchad.term").toggle { pos = "float", float_opts = { width = 1.0, height = 0.95 }, id = "ftoggleTerm" } end, { desc = "Toggle Terminal Float" })
+map({ "n", "t" }, "<F7>", function() require("nvchad.term").toggle { pos = "float", float_opts = { relative = "editor", width = 1.0, height = 0.95, border = "single" }, id = "ftoggleTerm" } end, { desc = "Toggle Terminal Float" })
 
 -- lsp
 map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() end, { desc = "LSP type definition" })
