@@ -62,6 +62,14 @@ return {
             vim.opt.formatoptions:remove("c")
             -- vim.print(vim.opt.formatoptions:get())
           end,
+          cmd = function()
+            local os = vim.loop.os_uname().sysname
+            if os == "Darwin" then
+              return { "ra-multiplex" }
+            else
+              return { "rust-analyzer" }
+            end
+          end,
           default_settings = {
             -- rust-analyzer language server configuration
             ['rust-analyzer'] = {
