@@ -34,7 +34,7 @@ alias cr='cargo run'
 alias call='ct && cy'
 # alias ll='exa --git --icons --color=always --group-directories-first -alhF'
 alias ls='lsd'
-alias ll='lsd -a -l'
-alias lt='lsd -tree'
+alias ll='lsd -a -l -g'
+alias lt='lsd --tree'
 
 eval "$(starship init zsh)"
