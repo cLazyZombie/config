@@ -1,5 +1,4 @@
 require "nvchad.mappings"
-
 -- delete default mappings
 -- default: https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/mappings.lua
 vim.keymap.del("n", "<TAB>")
@@ -29,8 +28,10 @@ map({ "n", "t" }, "<F7>", function() require("nvchad.term").toggle { pos = "floa
 
 -- lsp
 map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() end, { desc = "LSP type definition" })
-map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
-map("n", "<leader>fm", function() require("telescope.builtin").lsp_document_symbols() end, { desc = "LSP document synbols" })
+map("n", "<leader>fS", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
+map("n", "<leader>fs", function() require("telescope.builtin").lsp_document_symbols() end, { desc = "LSP document synbols" })
+map("n", "<leader>fm", function() require("telescope.builtin").marks() end, { desc = "List Bookmarks" })
+map("n", "<leader>fj", function() require("telescope.builtin").jumplist() end, { desc = "List Jumplist" })
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics { bufnr = 0 } end, { desc = "LSP buffer diagnostics" })
 map("n", "<leader>fD", function() require("telescope.builtin").diagnostics() end, { desc = "LSP diagnostics" })
 map("n", "<leader>fr", function() require("telescope.builtin").lsp_references() end, { desc = "LSP references" })
@@ -40,9 +41,11 @@ map("n", "<leader>fg", function() require("telescope.builtin").git_status() end,
 map("n", "gl", function() vim.diagnostic.open_float() end, { desc = "LSP open diagnostics" })
 
 -- git
-map("n", "<leader>gd", function() require('gitsigns').diffthis() end, { desc = "Git diff this file" })
-map("n", "[g", function() require('gitsigns').nav_hunk('prev') end, { desc = "go to prev git changes" })
-map("n", "]g", function() require('gitsigns').nav_hunk('next') end, { desc = "go to next git changes" })
+map("n", "<leader>gs", function() require('telescope.builtin').git_stash() end, { desc = "Git Stash" })
+map("n", "<leader>gt", function() require('telescope.builtin').git_status() end, { desc = "Git Status" })
+map("n", "<leader>gc", function() require('telescope.builtin').git_bcommits() end, { desc = "Git Commits about this Buffer" })
+map("n", "<leader>gC", function() require('telescope.builtin').git_commits() end, { desc = "Git Commits" })
+map("n", "<leader>gb", function() require('telescope.builtin').git_branches() end, { desc = "Git Branches" })
 
 -- copilot chat
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
