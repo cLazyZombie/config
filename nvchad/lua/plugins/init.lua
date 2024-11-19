@@ -36,6 +36,7 @@ return {
       opts.mapping["<Down>"] = cmp.mapping.select_next_item()
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
+      -- opts.mapping["<C-Space>"] = nil
     end,
   },
   {
@@ -112,7 +113,7 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-f>",
+          accept = "<C-_>",
         }
       }
     }
