@@ -1,0 +1,241 @@
+{
+  "description": "Left Control as Escape when tapped, Control when held or another key is pressed",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "left_control",
+        "modifiers": { "optional": ["any"] }
+      },
+      "to": [
+        {
+          "key_code": "left_control",
+          "lazy": true
+        }
+      ],
+      "to_if_alone": [{ "key_code": "escape" }],
+      "type": "basic"
+    }
+  ]
+}
+,
+{
+  "description": "number or function",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "1",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "1" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f1"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "2",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "2" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f2"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "3",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "3" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f3"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "4",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "4" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f4"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "5",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "5" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f5"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "6",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "6" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f6"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "7",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "7" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f7"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "8",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "8" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f8"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "9",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "9" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f9"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "0",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "0" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f10"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "equal_sign",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "equal_sign" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f11"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "hyphen",
+        "modifiers": { "optional": ["any"] }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_after_key_up": [{ "key_code": "hyphen" }],
+      "to_if_held_down": [
+        {
+          "halt": true,
+          "key_code": "f12"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
