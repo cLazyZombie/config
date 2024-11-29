@@ -12,6 +12,9 @@ return {
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
+
+      local opts = { noremap = true, silent = true }
+      vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
     end,
   },
 
