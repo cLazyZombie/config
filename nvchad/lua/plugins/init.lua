@@ -116,7 +116,7 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-/>",
+          accept = "<C-_>",
         }
       }
     }
