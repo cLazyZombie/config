@@ -150,4 +150,13 @@ return {
       require('spectre').setup({ is_block_ui_break = true })
     end,
   },
+  -- copy to clipboard when ssh
+  {
+    'ojroques/nvim-osc52',
+    init = function()
+      local plugin = require('osc52')
+      vim.keymap.set('n', '<leader>b', plugin.copy_operator, {expr = true})
+      vim.keymap.set('v', '<leader>b', plugin.copy_visual)
+    end
+  },
 }

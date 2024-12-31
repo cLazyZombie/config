@@ -18,7 +18,7 @@ end
 -- highlight on yank
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
-vim.api.nvim_set_option("clipboard", "unnamed")
+-- vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- dap
 vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='', linehl='', numhl=''})
@@ -32,3 +32,11 @@ vim.lsp.inlay_hint.enable(true)
 -- for rustaceanvim, on_attach function also removes 't' and 'c' from formatoptions
 vim.opt.formatoptions:remove("t")
 vim.opt.formatoptions:remove("c")
+
+-- vim.g.clipboard = {
+--   name = 'OSC 52',
+--   copy = {
+--     ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+--     ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+--   },
+-- }
