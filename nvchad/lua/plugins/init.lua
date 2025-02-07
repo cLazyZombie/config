@@ -21,6 +21,9 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
+      ensure_installed = {
+        "pyright"
+      },
       -- ensure_installed = {
       --   "rust-analyzer", "lua-language-server", "stylua",
       --   "html-lsp", "css-lsp" , "prettier"
@@ -116,7 +119,7 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-_>",
+          accept = "<C-f>",
         }
       }
     }

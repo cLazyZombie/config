@@ -17,6 +17,16 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w!<CR><ESC>")
 map("n", "[b", function() require("nvchad.tabufline").prev() end, { desc = "Buffer Goto previous" })
 map("n", "]b", function() require("nvchad.tabufline").next() end, { desc = "Buffer Goto next" })
 map("n", "<leader>bc", function() require("nvchad.tabufline").closeAllBufs(false) end, { desc = "Buffer Close all except current" })
+map("n", "<leader>bh", function()
+  local b = vim.fn.bufnr()
+  vim.cmd('wincmd h')
+  vim.cmd('b ' .. b)
+end, { desc = "move buffer left" })
+map("n", "<leader>bl", function()
+  local b = vim.fn.bufnr()
+  vim.cmd('wincmd l')
+  vim.cmd('b ' .. b)
+end, { desc = "move buffer right" })
 
 -- nvimtree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Nvimtree Toggle window" })
@@ -28,8 +38,8 @@ map({ "n", "t" }, "<F7>", function() require("nvchad.term").toggle { pos = "floa
 
 -- lsp
 map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() end, { desc = "LSP type definition" })
-map("n", "<leader>fS", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
-map("n", "<leader>fs", function() require("telescope.builtin").lsp_document_symbols() end, { desc = "LSP document synbols" })
+map("n", "<leader>fs", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, { desc = "LSP workspace symbols" })
+map("n", "<leader>fS", function() require("telescope.builtin").lsp_document_symbols() end, { desc = "LSP document synbols" })
 map("n", "<leader>fm", function() require("telescope.builtin").marks() end, { desc = "List Bookmarks" })
 map("n", "<leader>fj", function() require("telescope.builtin").jumplist() end, { desc = "List Jumplist" })
 map("n", "<leader>fd", function() require("telescope.builtin").diagnostics { bufnr = 0 } end, { desc = "LSP buffer diagnostics" })
@@ -49,7 +59,8 @@ map("n", "<leader>gb", function() require('telescope.builtin').git_branches() en
 
 -- copilot
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
-map("n", "<C-_>", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
+map("n", "<C-f>", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
+map("n", "<leader>cs", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
 
 
 -- paste with leader-v
