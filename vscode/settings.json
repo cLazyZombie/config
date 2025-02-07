@@ -97,7 +97,22 @@
       "commands": [
         "workbench.action.navigateRight"
       ]
-    }
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "after": [
+        "c", "i", "w"
+      ]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": [
+          "workbench.view.explorer", // Explorer 창 열기
+          "workbench.files.action.showActiveFileInExplorer" // 현재 파일에 포커스
+      ]
+    } 
   ],
   "vim.smartRelativeLine": true,
   "vim.statusBarColorControl": true,
