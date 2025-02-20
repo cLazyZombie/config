@@ -3,7 +3,8 @@ local config = wezterm.config_builder()
 
 -- set font
 -- config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Bold'})
-config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Regular'})
+-- config.font = wezterm.font('MesloLGM Nerd Font Mono', {weight='Regular'})
+config.font = wezterm.font('Meslo LG M for Powerline', {weight='Regular'})
 config.font_size = 13.0
 -- config.freetype_load_target = "Normal"
 config.freetype_load_target = "Light"
