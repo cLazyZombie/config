@@ -59,9 +59,8 @@ map("n", "<leader>gb", function() require('telescope.builtin').git_branches() en
 
 -- copilot
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
-map("n", "<C-f>", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
+-- map("i", "<tab>", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
 map("n", "<leader>cs", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
-
 
 -- paste with leader-v
 map("n", "<leader>v", "ciw<C-r>0<ESC>")

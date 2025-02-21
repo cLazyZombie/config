@@ -32,6 +32,9 @@ return {
   },
   { -- override nvim-cmp plugin
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+    },
     -- override the options table that is used in the `require("cmp").setup()` call
     opts = function(_, opts)
       -- opts parameter is the default options table
@@ -42,6 +45,15 @@ return {
       opts.mapping["<Down>"] = cmp.mapping.select_next_item()
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
+      opts.mapping["<tab>"] = function(fallback)
+        if require("copilot.suggestion").is_visible() then
+          print("copilot suggestion visible")
+          require("copilot.suggestion").accept()
+        else
+          print("copilot suggestion not visible")
+          fallback()
+        end
+      end
       -- opts.mapping["<C-Space>"] = nil
     end,
   },
@@ -109,6 +121,14 @@ return {
   --   end
   -- },
   {
+    "jiaoshijie/undotree",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+    keys = { -- load the plugin only when using it's keybinding:
+      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+    },
+  },
+  {
     "mfussenegger/nvim-dap",
   },
   {
@@ -119,11 +139,24 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-f>",
+          accept = "<tab>",
+          next = "<C-Down>",
+          prev = "<C-Up>",
         }
       }
     }
   },
+  -- {
+  --   'ggml-org/llama.vim',
+  --   -- event = "BufReadPost",
+  --   lazy = false,
+  --   init = function()
+  --     vim.g.llama_config = {
+  --       n_predict = 512,
+  --       show_info = 0,
+  --     }
+  --   end,
+  -- },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
