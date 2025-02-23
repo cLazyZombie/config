@@ -40,21 +40,33 @@ return {
       -- opts parameter is the default options table
       -- the function is lazy loaded so cmp is able to be required
       local cmp = require("cmp")
-      -- modify the mapping part of the table
-      opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
-      opts.mapping["<Down>"] = cmp.mapping.select_next_item()
-      opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
-      opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
-      opts.mapping["<tab>"] = function(fallback)
-        if require("copilot.suggestion").is_visible() then
-          print("copilot suggestion visible")
-          require("copilot.suggestion").accept()
-        else
-          print("copilot suggestion not visible")
-          fallback()
+      opts.mapping = cmp.mapping.preset.insert({
+        ["<tab>"] = function(fallback)
+          print("tab pressed")
+          if require("copilot.suggestion").is_visible() then
+            print("copilot suggestion visible")
+            require("copilot.suggestion").accept()
+          else
+            print("copilot suggestion not visible")
+            fallback()
+          end
         end
-      end
-      -- opts.mapping["<C-Space>"] = nil
+      })
+      -- -- modify the mapping part of the table
+      -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+      -- opts.mapping["<Down>"] = cmp.mapping.select_next_item()
+      -- opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
+      -- opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
+      -- opts.mapping["<tab>"] = function(fallback)
+      --   print("tab pressed")
+      --   if require("copilot.suggestion").is_visible() then
+      --     print("copilot suggestion visible")
+      --     require("copilot.suggestion").accept()
+      --   else
+      --     print("copilot suggestion not visible")
+      --     fallback()
+      --   end
+      -- end
     end,
   },
   {
