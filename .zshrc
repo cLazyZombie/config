@@ -35,7 +35,8 @@ alias cr='cargo run'
 alias call='ct && cy'
 # alias ll='exa --git --icons --color=always --group-directories-first -alhF'
 alias ls='lsd'
-alias ll='lsd -a -l -g'
+# alias ll='lsd -a -l -g'
+alias ll='lsd -A -l'
 alias lt='lsd --tree'
 
 export PYENV_ROOT="$HOME/.pyenv"
