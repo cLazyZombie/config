@@ -26,14 +26,14 @@
   lsft      z     x     c     v     b     n     m     ,     .     /     @rsft-cw
             `     _     left  rght              down  up    [     ]
 
-                              lalt  lctl  rctl  ralt
-                        bspc  @sp   ins   prnt  @sp   spc
+                              lalt  lctl  rctl  caps
+                        bspc  @sp   ins   del   @sp   spc
                                     lmet  rmet
 )
 
 (deflayer   special
   _         _     _     _     _     _     _     _     _     _     _     _
-  _         _     _     _     _     _     _     _     _     _     _     _
+  f11       f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f12
   _         _     _     _     _     _     _     _     _     _     _     _
   _         _     _     _     _     _     left  down  up    rght  _     _
   _         _     _     _     _     _     _     _     _     _     _     _
