@@ -50,7 +50,8 @@ return {
             print("copilot suggestion not visible")
             fallback()
           end
-        end
+        end,
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
       })
       -- -- modify the mapping part of the table
       -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
