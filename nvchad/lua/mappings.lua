@@ -56,11 +56,13 @@ map("n", "<leader>gt", function() require('telescope.builtin').git_status() end,
 map("n", "<leader>gc", function() require('telescope.builtin').git_bcommits() end, { desc = "Git Commits about this Buffer" })
 map("n", "<leader>gC", function() require('telescope.builtin').git_commits() end, { desc = "Git Commits" })
 map("n", "<leader>gb", function() require('telescope.builtin').git_branches() end, { desc = "Git Branches" })
+map("n", "<leader>gd", function() require('gitsigns').diffthis( '~', { vertical = true, split = 'rightbelow' }) end, { desc = "Git Diff" })
+map("n", "<leader>gq", function() vim.cmd('wincmd p | q') end, { desc = "Quit Diff" })
 
 -- copilot
 map("n", "<leader>cc", function() require("CopilotChat").toggle() end, { desc = "Copilot Chat" })
 -- map("i", "<tab>", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
-map("n", "<leader>cs", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
+-- map("n", "<leader>cs", function() require("copilot.suggestion").accept("") end, { desc = "Copilot Accept" })
 
 -- paste with leader-v
 map("n", "<leader>v", "ciw<C-r>0<ESC>")
