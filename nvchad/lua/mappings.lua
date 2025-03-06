@@ -71,7 +71,7 @@ map("n", "<leader>v", "ciw<C-r>0<ESC>")
 map("n", "<BS>", "ciw")
 
 -- toggle inlay hints
-map("n", "<leader>i", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = "Toggle inlay hints" })
+map("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = "Toggle inlay hints" })
 
 -- dap
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Debug Continue" })

@@ -208,4 +208,27 @@ return {
       vim.keymap.set('v', '<leader>b', plugin.copy_visual)
     end
   },
+  -- convert to opposite word
+  {
+    'tigion/nvim-opposites',
+    -- event = { 'BufReadPost', 'BufNewFile' },
+    keys = {
+      { '<Leader>i', function() require('opposites').switch() end, desc = 'Switch to opposite word' },
+    },
+    ---@type opposites.Config
+    opts = {
+      opposites = {
+        ['Req'] = 'Resp',
+      },
+      opposites_by_ft = {
+        ['lua'] = {
+          ['=='] = '~=',     -- Replaces the default `['=='] = '!='` for lua files.
+        },
+        ['sql'] = {
+          ['AND'] = 'OR',  -- Adds a new for SQL files.
+        },
+      },
+    },
+  },
 }
+ 
