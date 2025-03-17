@@ -13,7 +13,7 @@
   lsft      z     x     c     v     b     n     m     ,     .     /     rsft
             `     102d  left  rght              up    down  [     ]
 
-                              lalt  lctl  rmet  rctl
+                              lctl  lalt  rmet  rctl
                         bspc  del   home  pgup  enter spc
                                     end   pgdn
 )
@@ -27,7 +27,7 @@
             `     _     left  rght              down  up    [     ]
 
                               lalt  lctl  rctl  caps
-                        bspc  @sp   ins   del   @sp   spc
+                        bspc  @sp   ins   del   enter spc
                                     lmet  rmet
 )
 
@@ -40,7 +40,7 @@
             _     _     _     _                 _     _     _     _
 
                               _     _     _     _
-                        del   _     _     _     _     enter
+                        del   _     _     _     _     _
                                     _     _
 )
 
