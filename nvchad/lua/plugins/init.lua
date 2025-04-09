@@ -10,7 +10,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
+      -- require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
 
       local opts = { noremap = true, silent = true }
@@ -95,12 +95,14 @@ return {
             -- vim.print(vim.opt.formatoptions:get())
           end,
           cmd = function()
-            local os = vim.loop.os_uname().sysname
-            if os == "Darwin" then
-              return { "ra-multiplex" }
-            else
-              return { "rust-analyzer" }
-            end
+            return { "rust-analyzer" }
+
+            -- local os = vim.loop.os_uname().sysname
+            -- if os == "Darwin" then
+            --   return { "ra-multiplex" }
+            -- else
+            --   return { "rust-analyzer" }
+            -- end
           end,
           default_settings = {
             -- rust-analyzer language server configuration
