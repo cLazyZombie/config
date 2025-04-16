@@ -95,14 +95,14 @@ return {
             -- vim.print(vim.opt.formatoptions:get())
           end,
           cmd = function()
-            return { "rust-analyzer" }
+            -- return { "rust-analyzer" }
 
-            -- local os = vim.loop.os_uname().sysname
-            -- if os == "Darwin" then
-            --   return { "ra-multiplex" }
-            -- else
-            --   return { "rust-analyzer" }
-            -- end
+            local os = vim.loop.os_uname().sysname
+            if os == "Darwin" then
+              return { "ra-multiplex" }
+            else
+              return { "rust-analyzer" }
+            end
           end,
           default_settings = {
             -- rust-analyzer language server configuration
@@ -179,7 +179,7 @@ return {
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
     opts = {
-      model = "claude-3.7-sonnet",
+      model = "gpt-4.1",
       debug = true, -- Enable debugging
       -- See Configuration section for rest
     },
