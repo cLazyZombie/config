@@ -203,5 +203,6 @@
   "debug.console.fontFamily": "MesloLGM Nerd Font Mono",
   "editor.codeLensFontFamily": "MesloLGM Nerd Font Mono",
   "errorLens.fontFamily": "MesloLGM NFM",
-  "json.format.enable": false
+  "json.format.enable": false,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
