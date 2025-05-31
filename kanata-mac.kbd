@@ -1,0 +1,66 @@
+(defcfg
+  process-unmapped-keys yes
+  windows-altgr cancel-lctl-press
+  macos-dev-names-include (
+    "Advantage2 Keyboard"
+  )
+  danger-enable-cmd yes
+)
+
+(defsrc
+  esc       f1    f2    f3    f4    f5    f6    f7    f9    f10   f11   f12
+  =         1     2     3     4     5     6     7     8     9     0     -
+  tab       q     w     e     r     t     y     u     i     o     p     \
+  caps      a     s     d     f     g     h     j     k     l     ;     '
+  lsft      z     x     c     v     b     n     m     ,     .     /     rsft
+            `     102d  left  rght              up    down  [     ]
+
+                              lctl  lalt  rmet  rctl 
+                        bspc  del   home  pgup  enter spc
+                                    end   pgdn
+)
+
+(deflayer   default
+  esc       f1    f2    f3    f4    f5    f6    f7    f9    f10   f11   f12
+  =         1     2     3     4     5     6     @7    8     9     0     -
+  tab       q     w     e     r     t     y     u     i     o     p     \
+  @lctl-esc a     s     d     f     g     h     j     k     l     ;     '
+  lsft      z     x     c     v     b     n     m     ,     .     /     @rsft-cw
+            `     _     left  rght              down  up    [     ]
+
+                              lalt  lctl  rctl  f18
+                        bspc  @sp   ins   del   enter spc
+                                    lmet  rmet
+)
+
+(deflayer   special
+  _         _     _     _     _     _     _     _     _     _     _     _
+  f11       f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f12
+  _        @lock  _     _     _     _     _     _     _     _     _     _
+  _         _     _     del   _     _     left  down  up    rght  _     _
+  _         _     _     _     _     _     _     _     _     _     _     _
+            _     nlk   home  end               pgdn  pgup  _     _
+
+                              _     _     _     _
+                        del   _     _     _     _     _
+                                    _     _
+)
+
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 150
+)
+
+(defalias
+  lctl-esc (tap-hold-press 200 500 esc lctl)
+  7 (tap-hold 200 250 7 f7)
+  cw (caps-word 2000)
+  rsft-cw (tap-dance 200 (rshft (caps-word 2000)))
+  sp (layer-while-held special)
+  winl (multi lmet l)
+  lock (multi lmet lctl q)
+  ;;lock (cmd rundll32.exe user32.dll LockWorkStation)
+)
