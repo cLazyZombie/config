@@ -69,7 +69,16 @@ map("n", "<leader>v", "ciw<C-r>0<ESC>")
 
 -- backspace at normal mode to delete word and enter insert mode
 map("n", "<BS>", "ciw")
-
+map("n", "<leader>cp", function()
+  local file = vim.fn.expand('%:p')
+  if file == '' then
+    print('No file to copy path')
+    return
+  end
+  vim.fn.setreg('+', file)
+  print('Copied file path to clipboard: ' .. file)
+end, { desc = "Copy current file path to clipboard" })
+-- nnoremap <leader>cp :let @+ = expand('%')<CR>
 -- toggle inlay hints
 map("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = "Toggle inlay hints" })
 
