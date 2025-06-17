@@ -1,0 +1,36 @@
+{
+ ; :simlayers {:del_layer {:key :delete_forward :alone {:key :escape}}}
+ :layers {:del_layer {:key :delete_forward}}
+ :main
+ [
+  ; {:des "disable delete key"
+   ; :rules [[:delete_forward nil nil]]}
+   ; :rules [[:caps_lock :left_control nil {:alone :escape}]]}
+
+  {:des "Caps Lock -> Left Control (hold) / Escape (tap)"
+   :rules [[:caps_lock :left_control nil {:alone :escape}]]}
+  ; {:des "Delete Layer - Backspace to Delete"
+   ; :rules [[:delete_forward :delete_or_backspace [:del_layer]]]} 
+  ;;{:des "Del -> del layer"
+   ;;:rules [[:delete_forward :delete_forward-layer nil]]}
+   {:des "Delete Layer - Numbers to Function Keys"
+   :rules [[:1 :f1 [:del_layer]]
+           [:2 :f2 [:del_layer]]
+           [:3 :f3 [:del_layer]]
+           [:4 :f4 [:del_layer]]
+           [:5 :f5 [:del_layer]]
+           [:6 :f6 [:del_layer]]
+           [:7 :f7 [:del_layer]]
+           [:8 :f8 [:del_layer]]
+           [:9 :f9 [:del_layer]]
+           [:0 :f10 [:del_layer]]
+           [:equal_sign :f11 [:del_layer]]
+           [:hyphen :f12 [:del_layer]]]}
+
+   {:des "Delete Layer - Vim Navigation"
+   :rules [[:h :left_arrow [:del_layer]]
+           [:j :down_arrow [:del_layer]]
+           [:k :up_arrow [:del_layer]]
+           [:l :right_arrow [:del_layer]]]}
+ ]
+}
