@@ -47,3 +47,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Windsurf
 export PATH="/Users/jo/.codeium/windsurf/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

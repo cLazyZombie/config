@@ -30,46 +30,46 @@ return {
       -- },
     },
   },
-  { -- override nvim-cmp plugin
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-    },
-    -- override the options table that is used in the `require("cmp").setup()` call
-    opts = function(_, opts)
-      -- opts parameter is the default options table
-      -- the function is lazy loaded so cmp is able to be required
-      local cmp = require("cmp")
-      opts.mapping = cmp.mapping.preset.insert({
-        ["<tab>"] = function(fallback)
-          print("tab pressed")
-          if require("copilot.suggestion").is_visible() then
-            print("copilot suggestion visible")
-            require("copilot.suggestion").accept()
-          else
-            print("copilot suggestion not visible")
-            fallback()
-          end
-        end,
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
-      })
-      -- -- modify the mapping part of the table
-      -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
-      -- opts.mapping["<Down>"] = cmp.mapping.select_next_item()
-      -- opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
-      -- opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
-      -- opts.mapping["<tab>"] = function(fallback)
-      --   print("tab pressed")
-      --   if require("copilot.suggestion").is_visible() then
-      --     print("copilot suggestion visible")
-      --     require("copilot.suggestion").accept()
-      --   else
-      --     print("copilot suggestion not visible")
-      --     fallback()
-      --   end
-      -- end
-    end,
-  },
+  -- { -- override nvim-cmp plugin
+  --   "hrsh7th/nvim-cmp",
+  --   dependencies = {
+  --     { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+  --   },
+  --   -- override the options table that is used in the `require("cmp").setup()` call
+  --   opts = function(_, opts)
+  --     -- opts parameter is the default options table
+  --     -- the function is lazy loaded so cmp is able to be required
+  --     local cmp = require("cmp")
+  --     opts.mapping = cmp.mapping.preset.insert({
+  --       ["<tab>"] = function(fallback)
+  --         print("tab pressed")
+  --         if require("copilot.suggestion").is_visible() then
+  --           print("copilot suggestion visible")
+  --           require("copilot.suggestion").accept()
+  --         else
+  --           print("copilot suggestion not visible")
+  --           fallback()
+  --         end
+  --       end,
+  --       ["<CR>"] = cmp.mapping.confirm({ select = true }),
+  --     })
+  --     -- -- modify the mapping part of the table
+  --     -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+  --     -- opts.mapping["<Down>"] = cmp.mapping.select_next_item()
+  --     -- opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
+  --     -- opts.mapping["<Up>"] = cmp.mapping.select_prev_item()
+  --     -- opts.mapping["<tab>"] = function(fallback)
+  --     --   print("tab pressed")
+  --     --   if require("copilot.suggestion").is_visible() then
+  --     --     print("copilot suggestion visible")
+  --     --     require("copilot.suggestion").accept()
+  --     --   else
+  --     --     print("copilot suggestion not visible")
+  --     --     fallback()
+  --     --   end
+  --     -- end
+  --   end,
+  -- },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -146,21 +146,21 @@ return {
   {
     "mfussenegger/nvim-dap",
   },
-  {
-    "zbirenbaum/copilot.lua",
-    event = { "InsertEnter" },
-    cmd = { "Copilot" },
-    opts = {
-      suggestion = {
-        auto_trigger = true,
-        keymap = {
-          accept = "<tab>",
-          next = "<C-Down>",
-          prev = "<C-Up>",
-        }
-      }
-    }
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = { "InsertEnter" },
+  --   cmd = { "Copilot" },
+  --   opts = {
+  --     suggestion = {
+  --       auto_trigger = true,
+  --       keymap = {
+  --         accept = "<tab>",
+  --         next = "<C-Down>",
+  --         prev = "<C-Up>",
+  --       }
+  --     }
+  --   }
+  -- },
   -- {
   --   'ggml-org/llama.vim',
   --   -- event = "BufReadPost",
@@ -172,19 +172,19 @@ return {
   --     }
   --   end,
   -- },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-    },
-    opts = {
-      model = "gpt-4.1",
-      debug = true, -- Enable debugging
-      -- See Configuration section for rest
-    },
-    -- See Commands section for default commands if you want to lazy load on them
-  },
+  -- {
+  --   "CopilotC-Nvim/CopilotChat.nvim",
+  --   dependencies = {
+  --     { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+  --     { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+  --   },
+  --   opts = {
+  --     model = "gpt-4.1",
+  --     debug = true, -- Enable debugging
+  --     -- See Configuration section for rest
+  --   },
+  --   -- See Commands section for default commands if you want to lazy load on them
+  -- },
   {
     'saecki/crates.nvim',
     tag = 'stable',
@@ -204,10 +204,56 @@ return {
   -- copy to clipboard when ssh
   {
     'ojroques/nvim-osc52',
+    -- config = function()
+    --   print("osc52============")
+    --   local osc52 = require('osc52')
+    --   osc52.setup({
+    --     max_length = 0,
+    --     silent = false,
+    --     trim = false,
+    --   })
+    --   -- SSH 세션에서만 활성화
+    --   if vim.env.SSH_TTY then
+    --     print("ssh====")
+    --
+    --     local function copy(lines, _)
+    --       osc52.copy(table.concat(lines, '\n'))
+    --     end
+    --
+    --     local function paste()
+    --       return {vim.fn.split(vim.fn.getreg(''), '\n'), 'V'}
+    --     end
+    --
+    --     vim.g.clipboard = {
+    --       name = 'osc52',
+    --       copy = {['+'] = copy, ['*'] = copy},
+    --       paste = {['+'] = paste, ['*'] = paste},
+    --     }
+    --   end
+    -- end,
     init = function()
-      local plugin = require('osc52')
-      vim.keymap.set('n', '<leader>b', plugin.copy_operator, {expr = true})
-      vim.keymap.set('v', '<leader>b', plugin.copy_visual)
+      local osc52 = require('osc52')
+      osc52.setup({
+        max_length = 0,
+        silent = false,
+        trim = false,
+      })
+      -- SSH 세션에서만 활성화
+      if vim.env.SSH_TTY then
+        local function copy(lines, _)
+          osc52.copy(table.concat(lines, '\n'))
+        end
+
+        local function paste()
+          return {vim.fn.split(vim.fn.getreg(''), '\n'), 'V'}
+        end
+
+        vim.g.clipboard = {
+          name = 'osc52',
+          copy = {['+'] = copy, ['*'] = copy},
+          paste = {['+'] = paste, ['*'] = paste},
+        }
+      end
     end
   },
   -- convert to opposite word

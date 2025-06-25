@@ -1,0 +1,14 @@
+{
+  "globalShortcut": "Cmd+\\",
+  "mcpServers": {
+      "no2": {
+      "command": "/Users/jo/go/bin/mcp-language-server",
+      "args": [
+        "--workspace",
+        "/Users/jo/work/no2",
+        "--lsp",
+        "/opt/homebrew/bin/rust-analyzer"
+      ]
+    }
+  }
+}

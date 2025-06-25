@@ -32,11 +32,3 @@ vim.lsp.inlay_hint.enable(true)
 -- for rustaceanvim, on_attach function also removes 't' and 'c' from formatoptions
 vim.opt.formatoptions:remove("t")
 vim.opt.formatoptions:remove("c")
-
--- vim.g.clipboard = {
---   name = 'OSC 52',
---   copy = {
---     ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
---     ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
---   },
--- }
