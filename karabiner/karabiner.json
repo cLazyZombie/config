@@ -436,6 +436,14 @@
                         {
                             "from": { "key_code": "right_control" },
                             "to": [{ "key_code": "f18" }]
+                        },
+                        {
+                            "from": { "key_code": "down_arrow" },
+                            "to": [{ "key_code": "up_arrow" }]
+                        },
+                        {
+                            "from": { "key_code": "up_arrow" },
+                            "to": [{ "key_code": "down_arrow" }]
                         }
                     ]
                 }
