@@ -8,8 +8,13 @@
 [core]
 	pager = delta
 [delta]
-  side-by-side = true        # side-by-side 모드 활성화
+  side-by-side = true       # side-by-side 모드 활성화
   line-numbers = true       # 라인 번호 표시 활성화
-  diff-args = -U10          # diff 컨텍스트를 10줄로 설정
+  navigate = true 
+  dark = true
 [interactive]
   diffFilter = delta --color-only
+[diff]
+	context = 10
+[merge]
+  conflictStyle = zdiff3
