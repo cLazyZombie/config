@@ -130,7 +130,7 @@
     "FIG_NEW_SESSION": "1"
   },
   "vim.targets.smartQuotes.aIncludesSurroundingSpaces": false,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -204,5 +204,14 @@
   "editor.codeLensFontFamily": "MesloLGM Nerd Font Mono",
   "errorLens.fontFamily": "MesloLGM NFM",
   "json.format.enable": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "roo-cline.deniedCommands": []
 }

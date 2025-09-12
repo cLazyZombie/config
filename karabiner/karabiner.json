@@ -406,6 +406,28 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Delete Layer - Other",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "del_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "q" },
+                                "to": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": ["left_command", "left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -417,6 +439,10 @@
                         "vendor_id": 10730
                     },
                     "simple_modifications": [
+                        {
+                            "from": { "key_code": "down_arrow" },
+                            "to": [{ "key_code": "up_arrow" }]
+                        },
                         {
                             "from": { "key_code": "end" },
                             "to": [{ "key_code": "left_command" }]
@@ -436,10 +462,6 @@
                         {
                             "from": { "key_code": "right_control" },
                             "to": [{ "key_code": "f18" }]
-                        },
-                        {
-                            "from": { "key_code": "down_arrow" },
-                            "to": [{ "key_code": "up_arrow" }]
                         },
                         {
                             "from": { "key_code": "up_arrow" },
