@@ -1,14 +1,21 @@
 {
   "globalShortcut": "Cmd+\\",
   "mcpServers": {
-      "no2": {
-      "command": "/Users/jo/go/bin/mcp-language-server",
+    "mcp-obsidian": {
+      "command": "uvx",
       "args": [
-        "--workspace",
-        "/Users/jo/work/no2",
-        "--lsp",
-        "/opt/homebrew/bin/rust-analyzer"
-      ]
+        "mcp-obsidian"
+      ],
+      "env": {
+        "OBSIDIAN_API_KEY": "8a31de5ff1250f3055aff1b69b608817b21ee4e94cdb52d859117878edd417c0",
+        "OBSIDIAN_HOST": "localhost",
+        "OBSIDIAN_PORT": "27124"
+      }
+    }
+  },
+  "preferences": {
+    "quickEntryShortcut": {
+      "accelerator": "Cmd+\\"
     }
   }
 }

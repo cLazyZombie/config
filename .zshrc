@@ -44,17 +44,3 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Added by Windsurf
-export PATH="/Users/jo/.codeium/windsurf/bin:$PATH"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-# Task Master aliases added on 7/9/2025
-alias tm='task-master'
-alias taskmaster='task-master'
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/jo/.lmstudio/bin"
-# End of LM Studio CLI section

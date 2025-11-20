@@ -169,7 +169,7 @@
                         ]
                     },
                     {
-                        "description": "Auto generated layer conditions",
+                        "description": "Delete Layer",
                         "manipulators": [
                             {
                                 "from": { "key_code": "delete_forward" },
@@ -189,7 +189,7 @@
                                         }
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "delete_forward" }],
+                                "to_if_alone": [{ "key_code": "vk_none" }],
                                 "type": "basic"
                             }
                         ]
