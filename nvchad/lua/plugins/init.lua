@@ -109,7 +109,19 @@ return {
             ['rust-analyzer'] = {
               cargo = {
                 allFeatures = true,
-                --   features = { 'all' },
+                targetDir = true,  -- 빌드 캐시 최적화
+              },
+              check = {
+                command = 'clippy',  -- cargo check 대신 clippy 사용 (더 엄격한 린팅)
+              },
+              inlayHints = {
+                bindingModeHints = { enabled = true },
+                closureCaptureHints = { enabled = true },
+                closureReturnTypeHints = { enable = 'always' },
+                maxLength = 100,
+              },
+              rustc = {
+                source = 'discover',
               },
             },
           },
