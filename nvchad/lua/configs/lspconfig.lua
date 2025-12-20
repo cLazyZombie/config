@@ -2,7 +2,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
 -- Neovim 0.11+ uses vim.lsp.config() and vim.lsp.enable()
-local servers = { "html", "cssls", "ts_ls", "basedpyright" }
+local servers = { "html", "cssls", "ts_ls", "basedpyright", "haskell" }
 
 -- Enable all servers (they use global config from defaults)
 vim.lsp.enable(servers)
