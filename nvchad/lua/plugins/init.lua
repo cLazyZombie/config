@@ -79,6 +79,54 @@ return {
       },
     },
   },
+  -- nvim-tree: <leader>fw를 폴더 범위 live grep으로 오버라이드
+  -- ripgrep(rg) 필요: brew install ripgrep
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      local nvchad_opts = require("nvchad.configs.nvimtree")
+
+      nvchad_opts.on_attach = function(bufnr)
+        local api = require("nvim-tree.api")
+
+        -- 기본 매핑 먼저 적용
+        api.config.mappings.default_on_attach(bufnr)
+
+        -- 커서 아래 노드의 디렉토리에서 live grep 수행
+        local function grep_in_directory()
+          local node = api.tree.get_node_under_cursor()
+          if not node then
+            return
+          end
+
+          -- 검색할 디렉토리 결정
+          local search_dir
+          if node.type == "directory" then
+            search_dir = node.absolute_path
+          else
+            -- 파일인 경우 부모 디렉토리 사용
+            search_dir = node.parent and node.parent.absolute_path or vim.fn.getcwd()
+          end
+
+          -- Telescope live_grep 실행
+          require("telescope.builtin").live_grep({
+            search_dirs = { search_dir },
+            prompt_title = "Live Grep in " .. vim.fn.fnamemodify(search_dir, ":~:."),
+          })
+        end
+
+        -- 버퍼 로컬 키맵 설정
+        vim.keymap.set("n", "<leader>fw", grep_in_directory, {
+          buffer = bufnr,
+          noremap = true,
+          silent = true,
+          desc = "nvim-tree: Live grep in directory",
+        })
+      end
+
+      return nvchad_opts
+    end,
+  },
   {
     'mrcjkb/rustaceanvim',
     version = '^6', -- Recommended
