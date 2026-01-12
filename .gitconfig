@@ -8,7 +8,7 @@
 [core]
 	pager = delta
 [delta]
-  side-by-side = true       # side-by-side 모드 활성화
+  side-by-side = false
   line-numbers = true       # 라인 번호 표시 활성화
   navigate = true 
   dark = true

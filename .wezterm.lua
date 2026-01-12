@@ -47,6 +47,9 @@ config.keys = {
     action = wezterm.action.ActivateCopyMode,
   },
   {
+    key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}
+  },
+  {
     key = 'w',
     mods = 'CTRL|SHIFT',
     action = wezterm.action{CloseCurrentTab={confirm=false}},
